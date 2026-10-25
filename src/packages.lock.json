@@ -1,0 +1,193 @@
+{
+  "version": 1,
+  "dependencies": {
+    ".NETFramework,Version=v4.7.2": {
+      "LavaGang.MelonLoader": {
+        "type": "Direct",
+        "requested": "[0.7.3, )",
+        "resolved": "0.7.3",
+        "contentHash": "WnWhToOtU4BQDJMwJLpsesZ/tLA7nXwrUWFBNkLQMG/UqJLOgYgE6pR0tzWZMu+zBew+htOlalXc3D+5mGtj/Q==",
+        "dependencies": {
+          "AsmResolver.DotNet": "6.0.0-beta.5",
+          "AssetRipper.Primitives": "3.2.0",
+          "AssetsTools.NET": "3.0.4",
+          "HarmonyX": "2.10.2",
+          "Mono.Cecil": "0.11.6",
+          "MonoMod": "22.7.31.1",
+          "MonoMod.RuntimeDetour": "22.7.31.1",
+          "MonoMod.Utils": "22.7.31.1",
+          "Newtonsoft.Json": "13.0.4",
+          "Samboy063.Tomlet": "6.2.0",
+          "bHapticsLib": "1.0.6"
+        }
+      },
+      "AsmResolver": {
+        "type": "Transitive",
+        "resolved": "6.0.0-beta.5",
+        "contentHash": "G8qFOoSs2DQc4Ddvcu0qoqEWLy1ETuxzzevDMRxg6QTG//hIWaxEaxHMorWVYuPxYU//g8lM8XzdvMWF1wQOrg==",
+        "dependencies": {
+          "MonoMod.Backports": "1.1.2"
+        }
+      },
+      "AsmResolver.DotNet": {
+        "type": "Transitive",
+        "resolved": "6.0.0-beta.5",
+        "contentHash": "WlbVPV2gTacuJFOPEEsPL+4EHoaTKqjfFCvudrt+Nx1J+Frt781DelvyNMqu8UA/oXF07HgZbaLH//sOXJNI3w==",
+        "dependencies": {
+          "AsmResolver.PE": "6.0.0-beta.5"
+        }
+      },
+      "AsmResolver.PE": {
+        "type": "Transitive",
+        "resolved": "6.0.0-beta.5",
+        "contentHash": "gIv4Dxl/9x3+B1rEJW1Z3+N26B+mpk80+0LisYP+FtER/K4+TpsYijak5AJjj0IF17+elpzWAT/+YFVXAHD4Pw==",
+        "dependencies": {
+          "AsmResolver.PE.File": "6.0.0-beta.5"
+        }
+      },
+      "AsmResolver.PE.File": {
+        "type": "Transitive",
+        "resolved": "6.0.0-beta.5",
+        "contentHash": "+j1vOCMVk7Mst59yAd9BTNymTGrTNyuciSyFWumY/6pTL+ysOVMMtbbzKs53HdgxQgjKnKZMqYfob9X6Bk9Ndg==",
+        "dependencies": {
+          "AsmResolver": "6.0.0-beta.5"
+        }
+      },
+      "AssetRipper.Primitives": {
+        "type": "Transitive",
+        "resolved": "3.2.0",
+        "contentHash": "UtDpl72yG5/KUj3BsNP7k2sF13nqqeaJ4sTANZZd/gb+t9YULYYzcyNfxuvdptenlsQIUBmMwTVHUn6TZ61Jqg==",
+        "dependencies": {
+          "Microsoft.Bcl.HashCode": "1.1.1",
+          "System.Memory": "4.5.5",
+          "System.ValueTuple": "4.5.0"
+        }
+      },
+      "AssetsTools.NET": {
+        "type": "Transitive",
+        "resolved": "3.0.4",
+        "contentHash": "NqYy5UIucwKwdkpamFTi8lr53hD+V8qQmbHzztQj1v4Pq1G4TjNlpkUWOhktTLBqBm4aPRaAkpFgB+3TDEuomw=="
+      },
+      "bHapticsLib": {
+        "type": "Transitive",
+        "resolved": "1.0.6",
+        "contentHash": "vR4lFYAlz+xrgd0xAbPg9gGdkYq9KybnO+oyCo74OfaRt6EMYRFt5KUKZOu0oCaRrQcm32E3gPiQrla9t4AmkA==",
+        "dependencies": {
+          "WebSocketDotNet": "1.0.0"
+        }
+      },
+      "HarmonyX": {
+        "type": "Transitive",
+        "resolved": "2.10.2",
+        "contentHash": "/5WwkxXX8mPsRuigQt957rJGx1f0dDQxk+bvk4yYITKFjXas9Em+O71zEP8X0ym8OFQQ2XH/2SxS4NC7vEC+Xg==",
+        "dependencies": {
+          "MonoMod.RuntimeDetour": "22.3.23.4"
+        }
+      },
+      "IndexRange": {
+        "type": "Transitive",
+        "resolved": "1.0.2",
+        "contentHash": "BxTYJba0X+rMh7kyA2fYpOrFR3+bIVnBT/VzRinlAe7UZmHGcZk2SoWEIXzqnSFdkfCoi4K0QoHoE/nc71lmDg=="
+      },
+      "Microsoft.Bcl.HashCode": {
+        "type": "Transitive",
+        "resolved": "1.1.1",
+        "contentHash": "MalY0Y/uM/LjXtHfX/26l2VtN4LDNZ2OE3aumNOHDLsT4fNYy2hiHXI4CXCqKpNUNm7iJ2brrc4J89UdaL56FA=="
+      },
+      "Mono.Cecil": {
+        "type": "Transitive",
+        "resolved": "0.11.6",
+        "contentHash": "f33RkDtZO8VlGXCtmQIviOtxgnUdym9xx/b1p9h91CRGOsJFxCFOFK1FDbVt1OCf1aWwYejUFa2MOQyFWTFjbA=="
+      },
+      "MonoMod": {
+        "type": "Transitive",
+        "resolved": "22.7.31.1",
+        "contentHash": "NcfQBxRnQt9TkYPcyMvNRmCgfxvcqPoJbSpyZlYcG8mVtshR5CsQdwqKO5S1696gkVB50pCLSwskBWjzvsZuTg==",
+        "dependencies": {
+          "Mono.Cecil": "0.11.4",
+          "MonoMod.Utils": "22.7.31.1"
+        }
+      },
+      "MonoMod.Backports": {
+        "type": "Transitive",
+        "resolved": "1.1.2",
+        "contentHash": "baYlNy8n8kmaNhNvqmZ/dIPOeO1r9//dG1i2WbunMWtWZ2EKtIgmXaS+ZzphzTsikkGnoD4Jwr5g0TVdpDjgpw==",
+        "dependencies": {
+          "MonoMod.ILHelpers": "1.1.0",
+          "System.ValueTuple": "4.5.0"
+        }
+      },
+      "MonoMod.ILHelpers": {
+        "type": "Transitive",
+        "resolved": "1.1.0",
+        "contentHash": "L2FWjhTrv7tcIxshfZ+M3OcaNr4cNw0IwiVZEgwqRnZ5QAN3+RrNJ8ZwCzwXUWyPDqooJxMcjjg8PsSYUiNBjQ=="
+      },
+      "MonoMod.RuntimeDetour": {
+        "type": "Transitive",
+        "resolved": "22.7.31.1",
+        "contentHash": "nxVJTvQbWAujaogt5XX3eAy7d22t66Z88aWg9sirPLO9rR/6yNCHAyZpgxXrOsIobZVW0IEZPqNMOBhgke25/w==",
+        "dependencies": {
+          "Mono.Cecil": "0.11.4",
+          "MonoMod.Utils": "22.7.31.1"
+        }
+      },
+      "MonoMod.Utils": {
+        "type": "Transitive",
+        "resolved": "22.7.31.1",
+        "contentHash": "nI0E1oadXS1iMbfwfCzYF08C1jRQR9cnnHv66a4BSPd4sGu2p6g4BmctCWsdAB6oGKkSJUhcfHfxcfTsDyB94Q==",
+        "dependencies": {
+          "Mono.Cecil": "0.11.4"
+        }
+      },
+      "Newtonsoft.Json": {
+        "type": "Transitive",
+        "resolved": "13.0.4",
+        "contentHash": "pdgNNMai3zv51W5aq268sujXUyx7SNdE2bj1wZcWjAQrKMFZV260lbqYop1d2GM67JI1huLRwxo9ZqnfF/lC6A=="
+      },
+      "Samboy063.Tomlet": {
+        "type": "Transitive",
+        "resolved": "6.2.0",
+        "contentHash": "EDZxgcdxJdB9u/+XHZt0l3i7Kdv0b/xi9ElkO4BuksorhyOczTI+L1LuhaDJ14Vu7tmhPnvtvpBzXTitMzo8YA=="
+      },
+      "System.Buffers": {
+        "type": "Transitive",
+        "resolved": "4.5.1",
+        "contentHash": "Rw7ijyl1qqRS0YQD/WycNst8hUUMgrMH4FCn1nNm27M4VxchZ1js3fVjQaANHO5f3sN4isvP4a+Met9Y4YomAg=="
+      },
+      "System.Memory": {
+        "type": "Transitive",
+        "resolved": "4.5.5",
+        "contentHash": "XIWiDvKPXaTveaB7HVganDlOCRoj03l+jrwNvcge/t8vhGYKvqV+dMv6G4SAX2NoNmN0wZfVPTAlFwZcZvVOUw==",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        }
+      },
+      "System.Numerics.Vectors": {
+        "type": "Transitive",
+        "resolved": "4.5.0",
+        "contentHash": "QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ=="
+      },
+      "System.Runtime.CompilerServices.Unsafe": {
+        "type": "Transitive",
+        "resolved": "4.5.3",
+        "contentHash": "3TIsJhD1EiiT0w2CcDMN/iSSwnNnsrnbzeVHSKkaEgV85txMprmuO+Yq2AdSbeVGcg28pdNDTPK87tJhX7VFHw=="
+      },
+      "System.ValueTuple": {
+        "type": "Transitive",
+        "resolved": "4.5.0",
+        "contentHash": "okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ=="
+      },
+      "WebSocketDotNet": {
+        "type": "Transitive",
+        "resolved": "1.0.0",
+        "contentHash": "QbnWXQ8d0qPlweDjiYJa33kiXAV/tz7WHqm0wUjIQagd0XWVQrXTPgWNIAtoUKXJ2Qeu03M4Y6+P1MuWfun0eQ==",
+        "dependencies": {
+          "IndexRange": "1.0.2",
+          "System.Memory": "4.5.5"
+        }
+      }
+    }
+  }
+}

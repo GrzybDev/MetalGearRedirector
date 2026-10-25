@@ -1,0 +1,85 @@
+name: Release Build
+
+on:
+  release:
+    types: [published]
+
+  workflow_dispatch:
+    inputs:
+      version_type:
+        type: choice
+        description: 'Version Type'
+        required: true
+        default: rebuild
+        options:
+          - rebuild
+          - patch
+          - minor
+          - major
+
+env:
+  DOTNET_CLI_TELEMETRY_OPTOUT: '1'
+  DOTNET_NOLOGO: '1'
+
+jobs:
+  checks:
+    permissions:
+      contents: read
+    uses: ./.github/workflows/ci.yml
+
+  version:
+    name: Bump Version
+    needs: checks
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      version: ${{ steps.bump.outputs.version }}
+      ref: ${{ steps.bump.outputs.ref }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - id: bump
+        uses: GrzybDev/actions/bump-version@v1
+        with:
+          bump: ${{ inputs.version_type }}
+          version: ${{ github.event_name == 'release' && github.ref_name || '' }}
+
+  build:
+    name: Build
+    needs: version
+    runs-on: windows-latest
+    permissions:
+      contents: write
+    # The signing machine never signs a file uploaded longer ago, so the two change together.
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ needs.version.outputs.ref }}
+
+      - uses: actions/setup-dotnet@v6
+        with:
+          global-json-file: global.json
+
+      - name: Build
+        run: dotnet build src --configuration Release
+
+      - name: Sign the mod
+        uses: GrzybDev/actions/codesign@v1
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+          AWS_ENDPOINT_URL: ${{ secrets.AWS_ENDPOINT_URL }}
+        with:
+          files: src/bin/Release/net472/MetalGearRedirector.dll
+          version: ${{ needs.version.outputs.version }}
+          store: ${{ vars.SIGNING_STORE || 's3://codesign' }}
+          subject: ${{ vars.SIGNING_SUBJECT }}
+
+      - name: Attach the mod to the release
+        uses: softprops/action-gh-release@v3
+        with:
+          files: src/bin/Release/net472/MetalGearRedirector.dll
+          tag_name: v${{ needs.version.outputs.version }}

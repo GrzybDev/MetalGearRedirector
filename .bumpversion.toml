@@ -1,0 +1,9 @@
+[tool.bumpversion]
+current_version = "1.0.0"
+commit = true
+tag = true
+
+[[tool.bumpversion.files]]
+filename = "src/MetalGearRedirector.csproj"
+search = "<Version>{current_version}</Version>"
+replace = "<Version>{new_version}</Version>"

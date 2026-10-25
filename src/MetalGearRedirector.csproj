@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Version>1.0.0</Version>
+    <Title>MetalGearRedirector</Title>
+    <Description>Redirects the manual links of the METAL GEAR &amp; METAL GEAR 2: Solid Snake launcher, by default to the Polish manuals on metalgear.grzyb.app.</Description>
+    <Authors>GrzybDev</Authors>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- MelonLoader and its Harmony come with the loader installed in the game; only the mod itself ships. -->
+    <PackageReference Include="LavaGang.MelonLoader" Version="0.7.3" PrivateAssets="all" ExcludeAssets="runtime" />
+  </ItemGroup>
+
+  <Target Name="CopyToMods" AfterTargets="Build" Condition="'$(ModsFolder)' != ''">
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(ModsFolder)" />
+  </Target>
+</Project>

@@ -1,0 +1,15 @@
+<Project>
+  <PropertyGroup>
+    <!-- The launcher runs on Unity 2021's Mono, whose class libraries are those of .NET Framework 4.x. -->
+    <TargetFramework>net472</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AnalysisLevel>latest-recommended</AnalysisLevel>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <RestoreLockedMode Condition="'$(GITHUB_ACTIONS)' == 'true'">true</RestoreLockedMode>
+    <Copyright>Copyright © 2025 Marek Grzyb</Copyright>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+</Project>
