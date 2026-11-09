@@ -4,6 +4,7 @@
     <Title>MetalGearRedirector</Title>
     <Description>Redirects the manual links of the METAL GEAR &amp; METAL GEAR 2: Solid Snake launcher, by default to the Polish manuals on metalgear.grzyb.app.</Description>
     <Authors>GrzybDev</Authors>
+    <PackageLicenseExpression>LGPL-3.0-or-later</PackageLicenseExpression>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
